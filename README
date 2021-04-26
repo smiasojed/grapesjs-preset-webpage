@@ -1,0 +1,20 @@
+1. Run setup.sh
+It will download all the required sources and apply the patches
+
+Next you can go to grapesjs-preset-webpage: cd grapesjs-preset-webpage
+and start the application: npm start
+
+2. If you want to change promoclock plugin 
+go to grapesjs-component-promoclock: cd grapesjs-component-promoclock
+run: npm i
+make changes in src dir
+run: npm run buld 
+the component is generated in dist dir
+go back to grapesjs-preset-webpage and restart the server (npm start)
+
+3. if you want to apply new grapesjs to mautic 
+go to grapesjs-preset-webpage
+run: npm run build
+in dist dir will  be located new grapsejs
+
+place content of dist dir in on mautic_data volume: /var/lib/docker/volumes/mautic_data/_data/plugins/GrapesJsBuilderBundle/Assets/library/js/
